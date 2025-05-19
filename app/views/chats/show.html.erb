@@ -1,0 +1,20 @@
+<div class="chat-container">
+  <%= turbo_stream_from [@chat, "messages"] %>
+  <h1>Chat <%= @chat.id %></h1>
+  
+  <div class="messages-wrapper">
+    <div class="messages" id="messages">
+      <%= render @chat.messages %>
+    </div>
+  </div>
+
+  <div class="message-form-container">
+    <%= form_with(url: chat_messages_path(@chat), method: :post, class: "input-group") do |f| %>
+      <%= f.text_area :content, 
+          class: "message-input",
+          placeholder: "Type your message...",
+          autofocus: true %>
+      <%= f.submit "Send", class: "send-button" %>
+    <% end %>
+  </div>
+</div>

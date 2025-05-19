@@ -65,3 +65,4 @@ group :test do
 end
 
 gem "ruby_llm"
+gem "pg"

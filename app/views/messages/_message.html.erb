@@ -1,0 +1,16 @@
+<%= turbo_frame_tag message do %>
+  <div class="message <%= message.role %>" data-message-id="<%= message.id %>">
+    <div class="message-header">
+      <span class="role-label"><%= message.role.capitalize %></span>
+      <span class="timestamp"><%= time_ago_in_words(message.created_at) %> ago</span>
+    </div>
+    
+    <div class="message-content" id="<%= dom_id(message, "content") %>">
+      <% if message.content.present? %>
+        <%= simple_format(message.content) %>
+      <% else %>
+        <span class="thinking">Thinking...</span>
+      <% end %>
+    </div>
+  </div>
+<% end %>
