@@ -1,24 +1,33 @@
-# README
+# Ruby LLM Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+Integration of the RubyLLM gem.
 
-Things you may want to cover:
+## Setup and Configuration
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd ruby_llm
+```
 
-* Ruby version
+2. Install dependencies
+```bash
+bundle install
+```
+## Database Setup
+```bash
 
-* System dependencies
+add the Database.yml file
+# Create the database
+rails db:create
 
-* Configuration
+# Run migrations
+rails db:migrate
+```
 
-* Database creation
+## Running the Application
+```bash
+# Start the Rails server
+rails server
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+url: http://127.0.0.1:3000
