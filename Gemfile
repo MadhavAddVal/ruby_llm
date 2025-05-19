@@ -47,6 +47,8 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
+  gem "dotenv-rails"
+
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
@@ -61,3 +63,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "ruby_llm"
