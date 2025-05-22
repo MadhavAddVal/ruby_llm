@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   end
 
   root "chats#create"
+  post "appointments/extract", to: "appointments#extract"
 
   get "up" => "rails/health#show", as: :rails_health_check
 end

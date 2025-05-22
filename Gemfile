@@ -66,3 +66,4 @@ end
 
 gem "ruby_llm"
 gem "pg"
+gem "json_schemer"
